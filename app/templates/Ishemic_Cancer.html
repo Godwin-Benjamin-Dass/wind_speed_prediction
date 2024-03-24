@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300,400;500,600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+</style>
+
+<!-- Buttons -->
+
+<div class="p-22 bg-white flex justify-center space-x-6 ">
+  <a class="bg-yellow-600 hover:bg-red-500 py-3 px-8 rounded-lg text-yellow-100 border-b-4 border-yellow-700 hover:border-yellow-800 transition duration-700" href="{% url 'ishemic_cancer' %}">Wind Generation</a>
+  <a class="bg-yellow-600 hover:bg-green-700 py-3 px-8 rounded-lg text-yellow-100 border-b-4 border-yellow-700 hover:border-yellow-800 transition duration-700" href="{% url 'herimorr' %}">Wind Speed</a>
+  </div>
+  
+  
+    <div class="relative h-screen w-full flex items-center justify-center text-center bg-cover bg-center" style="background-image:url(/static/images/renewable.jpg);">
+    <div class="absolute top-0 right-0 bottom-0 left-0 bg-gray-900 opacity-75"></div>
+    
+    <main class="px-4 lg:px-8 z-10 sm:max-w-3xl sm:mx-auto">
+          <div class="text-center">
+            <h2 class="text-2xl tracking-tight leading-10 font-medium sm:text-3xl text-white md:text-4xl">
+                Wind generation
+            </h2>
+            <div class="py-5 text-sm font-regular text-white flex items-center justify-center">
+        <span class="mr-3 flex flex-row items-center">
+        <svg class="text-indigo-600" fill="currentColor" height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+  
+  </svg>
+        
+      </div>
+          </div>
+        </main>
+    
+  </div>
+    
+    <div class="max-w-6xl mx-auto">
+      <div class="mt-3 bg-gradient-to-r from-gray-500 to-red-500 rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
+          <div class="">
+                <p class="text-base leading-8 my-5">
+                  Wind generation serves several essential purposes in the realm of renewable energy</p>
+            
+            <h3 class="text-2xl font-bold my-5">Clean Energy Generation</h3>
+            
+            <p class="text-base leading-8 my-5">
+              Solar power harnesses energy from the sun to produce electricity without emissions or pollution, contributing to cleaner air and a reduced carbon footprint.</p>
+            
+            <h3 class="text-2xl font-bold my-5">Energy Independence</h3>
+
+            <p class="text-base leading-8 my-5">
+              By utilizing sunlight, solar power reduces reliance on fossil fuels and foreign energy sources, enhancing energy security for nations and communities.</p> 
+            <h3 class="text-2xl font-bold my-5">Sustainability</h3>
+            
+            <p class="text-base leading-8 my-5">
+              Solar energy is a sustainable and virtually inexhaustible resource, helping to combat climate change and ensure a long-term energy solution.</p>
+
+            <h3 class="text-2xl font-bold my-5">Reduced Electricity Bills</h3>
+            <p class="text-base leading-8 my-5">
+              Solar panels allow homeowners and businesses to generate their electricity, potentially leading to substantial cost savings over time.</p>
+
+            <h3 class="text-2xl font-bold my-5">Grid Support</h3>
+            <p class="text-base leading-8 my-5">
+              Solar power can be integrated into the electricity grid, providing stable and decentralized sources of electricity, which enhances grid reliability.</p>
+            
+            
+            
+           
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+                <li class="flex items-center justify-between px-4 py-2">
+                  <div class="antialiased">
+                    <div class="font-light text-3xl align-middle mb-2">Purposes of Power generation</div>      
+                      <ul class="list-outside list-disc">
+                        <li>Energy Storage Integration:</li>
+                        <li>Reduction of Peak Demand</li>
+                        <li>Incentives and Tax Benefits</li>
+                        <li>Distributed Generation</li>
+                        <li>Community Solar Projects</li>
+                        <li>Environmental Conservation</li>
+                        <li>Technological Advancements</li>
+                        <li>Climate Resilience</li>
+                      </ul>
+                    
+                  </div>
+                  
+                </li>
+              
+                
+                
+              </ul>
+              
+            
+            
+                </div>
+            
+              </div>
+         </div>
+    </div>
+    
+  </div>
+ 
+{% endblock content %}
+

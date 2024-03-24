@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="bg-gradient-to-r from-gray-500 to-red-500 mx-auto max-w-6xl bg-white py-20 px-12 lg:px-24 shadow-xl mb-24">
+      <form method="POST" action="{% url 'generation_model' %}">
+        {% csrf_token %}
+        <div class="bg-gradient-to-r from-gray-500 to-red-500 shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+          <center><h1 class="text-6xl py-6 text-blue-300">Generation Model</h1></center>
+          <div class="-mx-3 md:flex mb-6">
+            
+            <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="company">T_amb_Degree</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="company" step="0.01" name="T_amb_Degree" type="number" required placeholder="Please enter your amb degree value">
+
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="company">DewPoint_Degree</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" name="DewPoint_Degree" step="0.01" id="company" type="number" required placeholder="Please enter your Dewpoint degree value ">
+
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="company">Relative_Humidity</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" name="Relative_Humidity level" step="0.01" id="company" required type="number" placeholder="Please enter your humidity level value">
+              
+                           
+            </div>
+            
+            <div class="md:w-1/2 px-3">
+
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="company">Pressure_Bar</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="company" name="Pressure_Bar" step="0.01" type="number" required placeholder="Please enter pressure bar value">
+
+
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="title">Wind Direction</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="title" type="number" step="0.01" name="Wind Direction" required placeholder="Please enter wind direction value">
+
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="title">Wind_Speed_at_76.8</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="title" name="Wind_Speed_at_76.8" step="0.01" type="number" required placeholder="Please enter wind speed value">
+
+              
+            </div>
+            
+          </div>
+          
+          
+          <div class="-mx-3 md:flex mt-2">
+            <div class="md:w-full px-3">
+              <button class="md:w-full bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full">
+                Submit
+              </button>
+            </div>
+          </div>
+          <h1>{{ prediction_text }}</h1>
+        </div>
+      </form>
+      
+    </div>
+    
+  </body>
+{% endblock content %}
